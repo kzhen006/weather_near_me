@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Nav-link {
+  margin-right: 15px; /* Adds space between the links */
+}
