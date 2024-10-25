@@ -1,10 +1,15 @@
 import logo from './logo.svg';
+import React from 'react';
+import Weather from './Weather'; // importing the Weather component
 import './App.css';
 import NavScrollExample from './NavScrollExample';
 
 function App() {
   return (
     <div className="App">
+      <div className="App">
+      <Weather />  {/* Render the Weather component */}
+      </div>
 
      {/* Bootstrap Navbar */}
      <NavScrollExample />
