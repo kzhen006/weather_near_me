@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <div className="App">
-      <Weather />  {/* Render the Weather component */}
+      
       </div>
 
      {/* Bootstrap Navbar */}
@@ -16,8 +16,9 @@ function App() {
       
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h1>Welcome to the Weather Near Me App!</h1>
-        <p>This is the main content area.</p>
+        {/* <h1>Welcome to the Weather Near Me App!</h1>
+        <p>This is the main content area.</p> */}
+        <Weather />  {/* Render the Weather component */}
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -26,6 +27,8 @@ function App() {
         >
         </a>
       </header>
+
+      
 
       {/* Footer */}
       <footer className="App-footer">
