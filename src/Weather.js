@@ -18,7 +18,7 @@ const WeatherApp = () => {
     const fetchWeather = async () => {
       const latitude = 25.7617;  // Miami Latitude
       const longitude = -80.1918;  // Miami Longitude
-      const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m&timezone=auto`;
+      const apiURL = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,rain&timezone=auto`;
 
       try {
         const response = await axios.get(apiURL);
@@ -51,9 +51,7 @@ const WeatherApp = () => {
 
   // Extract current weather data
   const { current_weather } = weatherData;
-  const { temperature_2m = [], relative_humidity_2m = [], wind_speed_10m = [] } = weatherData.hourly || {};
-
-  
+  const { temperature_2m = [], relative_humidity_2m = [], wind_speed_10m = [], rain = [] } = weatherData.hourly || {};
 
   // Helper function to format hours into readable times
   const formatHour = (hourIndex) => {
@@ -97,17 +95,15 @@ const WeatherApp = () => {
                   <Typography variant="h6">{temp}°C</Typography>
                   <Typography variant="body2">Humidity: {relative_humidity_2m[index] || 0}%</Typography>
                   <Typography variant="body2">Wind: {wind_speed_10m[index] || 0} m/s</Typography>
+                  <Typography variant="body2">Rainfall: {rain[index] || 0} mm</Typography>
                 </Card>
               </Grid>
             ))}
           </Grid>
         </CardContent>
       </Card>
-
-      
     </div>
   );
 };
 
 export default WeatherApp;
-
