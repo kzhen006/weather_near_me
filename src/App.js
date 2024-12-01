@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import NavScrollExample from './NavScrollExample';
+import ThemeToggle from './ThemeToggle';
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
 
      {/* Bootstrap Navbar */}
      <NavScrollExample />
+
+    {/* Bootstrap Toggle */}  
+     <ThemeToggle />
       
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}

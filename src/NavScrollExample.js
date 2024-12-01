@@ -1,11 +1,11 @@
-// src/NavScrollExample.js
+
 
 import React from 'react';
 import { Container, Nav, Navbar, Form, Button } from 'react-bootstrap';
 
 function NavScrollExample() {
   return (
-    <Navbar expand="lg" className="bg-primary">
+    <Navbar expand="lg" className="bg-secondary">
       <Container fluid>
         <Navbar.Brand href="#home">Weather Near Me</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
